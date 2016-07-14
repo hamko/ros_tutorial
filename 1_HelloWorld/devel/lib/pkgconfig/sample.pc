@@ -1,8 +1,0 @@
-prefix=/home/hamko/git/ros_tutorial/1_HelloWorld/devel
-
-Name: sample
-Description: Description of sample
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/hamko/git/ros_tutorial/1_HelloWorld/devel/lib 
-Requires: 

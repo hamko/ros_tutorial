@@ -1,0 +1,7 @@
+# ワークスペースの場所を変えたらこれをやる必要がある
+rm build devel -rf
+
+catkin_make
+. devel/setup.bash
+roscore&
+rosrun sample test1

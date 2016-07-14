@@ -1,2 +1,0 @@
-sample
--DCATKIN_DEVEL_PREFIX=/home/hamko/git/ros_tutorial/1_HelloWorld/devel -DCMAKE_INSTALL_PREFIX=/home/hamko/git/ros_tutorial/1_HelloWorld/install -G Unix Makefiles
