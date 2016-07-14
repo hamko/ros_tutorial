@@ -1,0 +1,20 @@
+<!-- 
+pkg パッケージ名
+type 実行名
+name ノード名。デフォルトが定義されているはずだが、オーバーライドする 
+output="screen"を指定しないと、標準出力ではなくログファイルにログが貯まる
+-->
+
+
+<launch>
+<node
+pkg="publish_subscribe" 
+type="publisher_node" 
+name="pub_overrided" 
+/>
+<node
+pkg="publish_subscribe"
+type="subscriber_node"
+name="sub_overrided"
+/>
+</launch>

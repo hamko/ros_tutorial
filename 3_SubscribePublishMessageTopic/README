@@ -1,9 +1,20 @@
 . devel/setup.bash
 roscore & 
-rosrun publish_subscribe 
+rosrun publish_subscribe publisher_node 
+rosrun publish_subscribe subscriber_node 
 
+----
+
+. devel/setup.bash
+roscore & 
+rosrun publish_subscribe publisher_node 
 rqt_plot # /test/sinを空欄に入れて+ボタンを押す
 
+----
+. devel/setup.bash
+# roscoreはroslaunchが立ててくれる
+roslaunch publish_subscribe sub_pub.launch 
+rosnode list # ノード名がデフォルトから上書きされている
 ----
 
 rosrun [パッケージ名] [実行ファイル名]
