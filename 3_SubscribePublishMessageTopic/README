@@ -1,0 +1,32 @@
+. devel/setup.bash
+roscore & 
+rosrun publish_subscribe 
+
+rqt_plot # /test/sinを空欄に入れて+ボタンを押す
+
+----
+
+rosrun [パッケージ名] [実行ファイル名]
+実行ファイル名に定義された[ノード名]に対して、/[ノード名]というノードを作成する
+
+
+パッケージ名は、*_ws/src/の中に定義されている
+これとは別に[ノード名]というのがある（1つの実行ファイルから複数のプロセスが立ち上がる可能性があるため）
+これとは別に[ソースファイル名]がある。ソースファイル名と実行ファイル名はCMakelists.txtで定義されている。(add_executable(publisher_node src/publisher.cpp))
+
+
+パッケージ名    publish_subscribe
+ソース名        publisher.cpp
+実行名          publisher_node 
+ノード名        test_pub
+
+パッケージ名    publish_subscribe
+ソース名        subscriber.cpp
+実行名          subscriber_node 
+ノード名        test_sub
+
+
+立ち上げたノードを削除する
+rosnode kill /pub_test
+rosnode kill /sub_test
+
