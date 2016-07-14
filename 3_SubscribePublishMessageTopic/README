@@ -16,6 +16,17 @@ rqt_plot # /test/sinを空欄に入れて+ボタンを押す
 roslaunch publish_subscribe sub_pub.launch 
 rosnode list # ノード名がデフォルトから上書きされている
 ----
+#qtcreator
+sudo add-apt-repository ppa:alexey-ivanov/qtcreator
+sudo apt-get update
+sudo apt-get install qtcreator
+
+# CMakeListsがエイリアスで/opt以下を見ていて、Permission Deniedと言われる場合の対処
+ls ./src -la # CMakeLists.txtのエイリアス先を見る
+rm ./src/CMakeLists.txt
+mv エイリアス先 CMakeLists.txt
+
+----
 
 rosrun [パッケージ名] [実行ファイル名]
 実行ファイル名に定義された[ノード名]に対して、/[ノード名]というノードを作成する
