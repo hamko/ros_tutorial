@@ -1,9 +1,11 @@
+まずどういう挙動を示すのかを見る
 . devel/setup.bash
 roscore & 
 rosrun publish_subscribe publisher_node 
 rosrun publish_subscribe subscriber_node 
 
 ----
+/test/sinトピックに流れているメッセージを可視化する
 
 . devel/setup.bash
 roscore & 
